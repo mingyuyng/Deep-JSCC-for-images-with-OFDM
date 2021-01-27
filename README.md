@@ -1,6 +1,6 @@
 # Deep-JSCC-for-images-with-OFDM
 
-![Structure](example2.png)    
+![Structure](Structure.png)    
 
 ## Datasets
 
