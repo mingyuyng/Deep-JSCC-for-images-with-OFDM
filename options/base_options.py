@@ -54,6 +54,7 @@ class BaseOptions():
         parser.add_argument('--is_clip', action='store_true', help='whether to include clipping')
         parser.add_argument('--CR', type=float, default=1.0, help='clipping ratio')
         parser.add_argument('--N_pilot', type=int, default=2, help='number of pilot symbols for channel estimation')
+        parser.add_argument('--pilot', type=str, default='QPSK', help='type of pilots, choose from [QPSK | ZadoffChu]')
         parser.add_argument('--CE', type=str, default='LMMSE', help='channel estimation method, choose from [LS | LMMSE | TRUE]')
         parser.add_argument('--EQ', type=str, default='MMSE', help='equalization method, choose from [ZF | MMSE]')
         parser.add_argument('--SNR', type=float, default=20.0, help='SNR')

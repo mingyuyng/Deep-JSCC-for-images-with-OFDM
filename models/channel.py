@@ -55,13 +55,14 @@ class Clipping(nn.Module):
         self.CR = opt.CR  # Clipping ratio
     	
     def forward(self, x):
- 
+     
         # Calculate the additional non-linear noise
+        amp = torch.sqrt(torch.sum(x**2, -1, True))
+        sigma = torch.sqrt(torch.mean(x**2, (-2,-1), True) * 2)
+        ratio = sigma*self.CR/amp
+        scale = torch.min(ratio, torch.ones_like(ratio))
+        
         with torch.no_grad():
-            amp2 = torch.sum(x**2, -1, True)
-            amp = torch.sqrt(amp2)
-            pwr = torch.mean(amp2, -2, True)
-            scale = torch.min(torch.sqrt(pwr)*self.CR/amp, torch.ones_like(pwr))
             bias = x*scale - x
         
         return x + bias
