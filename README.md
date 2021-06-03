@@ -20,3 +20,10 @@ Suppose the input image has a size of C x W x H. To keep the size consistent, yo
 ## Reference
 
 > Mingyu Yang, Chenghong Bian, Hun-Seok Kim, "Deep Joint Source Channel Coding for WirelessImage Transmission with OFDM", accepted by ICC 2021
+
+    @article{yang2021deep,
+        title={Deep Joint Source Channel Coding for WirelessImage Transmission with OFDM},
+        author={Yang, Mingyu and Bian, Chenghong and Kim, Hun-Seok},
+        journal={arXiv preprint arXiv:2101.03909},
+        year={2021}
+    }
