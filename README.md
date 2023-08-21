@@ -2,6 +2,20 @@
 
 ![Structure](Structure.png)    
 
+## Environments
+
+python=3.8.0
+
+numpy=1.24.4
+
+pytorch=1.13.1+cu117
+
+cuda=12.2
+
+## Test the OFDM model
+
+The test script for the OFDM system implementation is in `models/channel.py`.
+
 ## Datasets
 
 This repository contains codes for CIFAR-10 and CelebA. For CelebA, you will need to download the dataset under `data` folder. You can also use other datasets but you need to customize the dataloader. One example is `data/CelebA_dataset.py`. 
