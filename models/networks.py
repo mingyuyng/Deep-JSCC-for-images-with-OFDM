@@ -26,12 +26,6 @@ class Flatten(nn.Module):
     N, C, H, W = x.size() # read in N, C, H, W
     return x.view(N, -1)  # "flatten" the C * H * W values into a single vector per image
 
-class Normalize(nn.Module):
-  def forward(self, x, power):
-    pwr = torch.mean(x**2, (-2,-1), True) * 2
-    return np.sqrt(power)*x/torch.sqrt(pwr)  
-
-
 def get_norm_layer(norm_type='instance'):
     """Return a normalization layer
 

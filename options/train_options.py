@@ -36,6 +36,9 @@ class TrainOptions(BaseOptions):
         parser.add_argument('--lr_decay_iters', type=int, default=50, help='multiply by a gamma every lr_decay_iters iterations')
         parser.add_argument('--lambda_L2', type=float, default=128, help='weights for the L2 loss')
         parser.add_argument('--lambda_feat', type=float, default=1, help='weights for the L2 loss')
+        parser.add_argument('--lambda_papr', type=float, default=0, help='weights for the L2 loss')
+        parser.add_argument('--lambda_ce', type=float, default=10, help='weights for the L2 loss')
+        parser.add_argument('--lambda_eq', type=float, default=10, help='weights for the L2 loss')
         parser.add_argument('--is_Feat', action='store_true', default=1, help='whether to use feature matching loss for generative training')
 
         self.isTrain = True

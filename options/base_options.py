@@ -59,7 +59,7 @@ class BaseOptions():
         parser.add_argument('--EQ', type=str, default='MMSE', help='equalization method, choose from [ZF | MMSE]')
         parser.add_argument('--SNR', type=float, default=20.0, help='SNR')
         parser.add_argument('--is_feedback', action='store_true', help='Wether to provide CSI feedback to the encoder')
-        parser.add_argument('--feedforward', type=str, default='EXPLICIT-RES2', help='which decoder design to use, choose from [IMPLICIT | EXPLICIT-CE | EXPLICIT-CE-EQ | EXPLICIT-RES | EXPLICIT-RES2]')
+        parser.add_argument('--feedforward', type=str, default='EXPLICIT-RES', help='which decoder design to use, choose from [IMPLICIT | EXPLICIT-CE | EXPLICIT-CE-EQ | EXPLICIT-RES]')
         # dataset parameters
         parser.add_argument('--dataset_mode', type=str, default='CIFAR10', help='chooses how datasets are loaded. [CIFAR10 | CelebA]')
         parser.add_argument('--serial_batches', action='store_true', help='if true, takes images in order to make batches, otherwise takes them randomly')
