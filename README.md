@@ -26,7 +26,7 @@ All available options are under `options` folder. Change `--feedforward` for dif
 
 One example for training:
 
-    python train.py --gpu_ids '0' --feedforward 'EXPLICIT-RES' --N_pilots 2 --n_downsample 2 --C_channel 12 --S 6 
+    python train.py --gpu_ids '0' --feedforward 'EXPLICIT-RES' --N_pilot 2 --n_downsample 2 --C_channel 12 --S 6 
       --SNR 20 --dataset_mode 'CIFAR10' --n_epochs 200 --n_epochs_decay 200 --lr 1e-3 
     
 Suppose the input image has a size of C x W x H. To keep the size consistent, you would need to satisfy the requirement:  WH/(2^(2xn_downsample))xC_channel = Sx128
