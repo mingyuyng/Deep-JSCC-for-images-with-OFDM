@@ -12,6 +12,12 @@ pytorch=1.13.1+cu117
 
 cuda=12.2
 
+dominate=2.8.0
+
+scipy=1.10.1
+
+visdom=0.2.4
+
 ## Test the OFDM model
 
 The test script for the OFDM system implementation is in `models/channel.py`.
